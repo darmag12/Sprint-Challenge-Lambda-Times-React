@@ -3,8 +3,10 @@ import { cardData } from '../../data';
 import PropTypes from 'prop-types'
 
 const Card = props => {
+  console.log('Card.js:',props)
   return (
-    <div className="card">
+    
+    <div className="card" key={props.card.headline}>
       <div className="headline">{props.card.headline}</div>
       <div className="author">
         <div className="img-container">
@@ -20,12 +22,12 @@ const Card = props => {
 
 //////// my proptypes start here ///////
 Card.propTypes = {
-  card: PropTypes.arrayOf(PropTypes.shape({
+  card: PropTypes.shape({
     headline: PropTypes.string,
     tab: PropTypes.string,
     img: PropTypes.string,
     author: PropTypes.string
-  }))
+  })
 }
 
 export default Card;
