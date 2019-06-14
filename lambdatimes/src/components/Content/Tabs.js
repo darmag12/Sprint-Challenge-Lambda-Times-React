@@ -27,7 +27,6 @@ const Tabs = props => {
 
 /////////my proptypes start here //////////
 Tabs.propTypes = {
-  key: PropTypes.number,
   tab: PropTypes.arrayOf(PropTypes.string)
 
 }

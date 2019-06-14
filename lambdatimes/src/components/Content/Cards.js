@@ -11,7 +11,7 @@ const Cards = props => {
           {props.cards.map((card) => {
             return (
                   <>
-                    <Card  card={card}/>
+                    <Card key={card.headline}  card={card}/>
                   </>
             )
           })}
@@ -24,7 +24,7 @@ const Cards = props => {
 ////// my proptypes ////////
 
 Cards.propTypes = {
-key: PropTypes.number,
+  
 cards: PropTypes.arrayOf(PropTypes.shape)
 
 }
