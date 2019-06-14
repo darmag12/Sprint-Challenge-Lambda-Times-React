@@ -3,7 +3,7 @@ import Card from './Card';
 import PropTypes from 'prop-types'
 
 const Cards = props => {
-  console.log('Cards.js:',props)
+  // console.log('Cards.js:',props)
   return (
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
@@ -11,7 +11,7 @@ const Cards = props => {
           {props.cards.map((card) => {
             return (
                   <>
-                    <Card key={card.headline} card={card}/>
+                    <Card  card={card}/>
                   </>
             )
           })}

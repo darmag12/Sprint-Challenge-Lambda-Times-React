@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Tabs from './Tabs';
+
 import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
@@ -42,7 +43,8 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-      return this.state.selected === 'all' ? this.state.cards : this.state.cards.filter(card =>card.tab === this.state.cards)
+      return this.state.selected === 'all' ? this.state.cards : this.state.cards.filter(card =>card.tab === this.state.selected)
+      // this code here looks if this.state.selected is equal to all if so it displays all the cards if not it filters out the cards and feeds each card in 'card' then only returns the cards whose tab match this.state.selected
       
      
    
@@ -58,6 +60,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
+       
         <Cards cards={this.filterCards()} />
       </div>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import Tab from './Tab';
 import PropTypes from 'prop-types'
 const Tabs = props => {
-  console.log('Tabs.js:',props)
+  // console.log('Tabs.js:',props)
   return (
     <div className="tabs">
       <div className="topics">
@@ -27,7 +27,8 @@ const Tabs = props => {
 
 /////////my proptypes start here //////////
 Tabs.propTypes = {
-  tab: PropTypes.arrayOf(PropTypes.string),
+  key: PropTypes.number,
+  tab: PropTypes.arrayOf(PropTypes.string)
 
 }
 

@@ -3,10 +3,10 @@ import { cardData } from '../../data';
 import PropTypes from 'prop-types'
 
 const Card = props => {
-  console.log('Card.js:',props)
+  // console.log('Card.js:',props)
   return (
     
-    <div className="card" key={props.card.headline}>
+    <div className="card">
       <div className="headline">{props.card.headline}</div>
       <div className="author">
         <div className="img-container">
