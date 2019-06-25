@@ -35,11 +35,14 @@ html,
 body {
   margin: 0;
   padding: 0;
+  
 }
 body {
   background-color: #f1f1f1;
   color: #333;
   font-family: 'PT Sans', sans-serif;
+  
+
 }
 #root {
   width: 100%;
@@ -51,6 +54,7 @@ body {
   background-color: #f1f1f1;
   color: #333;
   font-family: 'PT Sans', sans-serif;
+  
 }
 .top-bar {
   width: 100%;
@@ -221,6 +225,10 @@ body {
   width: 100%;
   margin-top: 16px;
   flex-wrap: wrap;
+  background-image: url('./img/overlay.png'), url('./img/black-and-white-black-and-white-monochrome-707676.jpg');
+  background-repeat: repeat, no-repeat;
+	background-size: auto, 100% 100%;
+	background-attachment: fixed;
 }
 @media (min-width: 1200px) {
   .cards-container {

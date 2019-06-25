@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { carouselData } from '../../data'
+import  carouselData  from '../../data'
 // Complete this Carousel 
-export default class Carousel extends Component {
+ class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      images: []
     }
+    // console.log(this.state.images)
   }
   componentDidMount(){
-
+    this.setState({images: carouselData})
   }
 
   leftClick = () => {
-
+    
+    
   }
 
   rightClick = () => {
@@ -21,10 +23,11 @@ export default class Carousel extends Component {
   }
 
   selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+    return <img src={this.state.images} style={{display: 'block'}} />
   }
   
   render(){
+    // console.log('in render',this.state.images)
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
@@ -33,3 +36,5 @@ export default class Carousel extends Component {
     )
   }
 }
+
+export default Carousel
